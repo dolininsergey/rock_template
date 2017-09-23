@@ -51,4 +51,171 @@ body
 	max-width: 100%
 	height: auto
 
+// Starting from here
+
+.button
+	display: inline-block
+	border: none
+	text-decoration: none
+	//color: $accent
+	background-color: #fff
+	padding: 11px 30px
+	font-size: 12px
+	text-transform: uppercase
+	font-family: droid
+	font-weight: bold
+	//letter-spacing: 3px
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	//transition: background-color .1s ease
+	cursor: pointer
+	&:hover
+		text-decoration: none
+
+
+.header
+	height: 100vh
+	background-size: cover
+	background-position: center 
+	display: flex
+	flex-direction: column
+	justify-content: center
+	position: relative
+	text-align: center
+	.discover
+		.button
+			background-color: $accent
+			color: #fff
+			padding: 13px 45px
+	nav
+		width: 100%
+		min-height: 85px
+		background-color: $accent
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		display: flex
+		justify-content: space-around
+		align-items: center
+		.left-menu
+			> ul
+				list-style-type: none
+				display: flex
+				//justify-content: space-between
+				padding-left: 0px
+				li
+					margin-right: 30px
+					a
+						text-transform: uppercase
+						font-size: 13px
+						font-family: droid
+						font-weight: bold
+						color: #fff
+						&:hover
+							text-decoration: none
+					&:last-child
+						margin-right: 0px
+		.right-menu
+			> ul
+				list-style-type: none
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding-left: 0px
+				li
+					margin-left: 30px
+					a
+						text-transform: uppercase
+						font-size: 13px
+						font-family: droid
+						font-weight: bold
+						color: #fff
+						&:hover
+							text-decoration: none
+					&:first-child
+						margin-left: 0px
+					.fa
+						font-size: 24px
+						margin-right: 15px
+				.button
+					color: $accent
+					&:hover
+						opacity: 0.9
+						transition: opacity .40s ease
+							
+	.header-tagline
+		text-align: center
+		.lets
+			text-transform: uppercase
+			font-family: oswald
+			font-weight: bold
+			font-size: 115px
+			color: $accent
+		.cantus
+			font-size: 80px
+			font-family: vibes
+			color: $common-grey	
+
+section
+	margin-top: 5%
+.content-item
+	//background-color: yellow
+	overflow: hidden
+	.content-item-headers
+		//background-color: #dedede
+		font-size: 32px
+		.h4
+			font-family: oswald
+			color: $common-grey
+		.h3
+			font-family: vibes
+			color: $accent	
+.members-carousel
+	display: flex
+	justify-content: space-between
+.member
+	//border: solid 1px #000
+	padding: 0
+	max-width: 365px
+	.member-img
+		max-height: 360px
+		overflow: hidden
+		img
+			max-width: 100%
+	.member-description
+		color: #fff
+		background-color: $accent
+		padding: 20px
+		.mem-name
+		 font-family: oswald
+		 font-size: 22px
+		.mem-category
+			font-family: droid
+			font-size: 16px
+		.mem-socials 
+			padding: 0
+			display: none
+			> ul
+				display: flex
+				list-style-type: none
+				text-transform: uppercase
+				padding: 0px
+				li
+					margin-right: 15px
+					a
+						color: #fff
+						font-family: opensans
+						font-size: 14px
+						&:hover
+							text-decoration: none
+					&:last-child
+						margin-right: 0px
+				.fa
+					font-size: 24px
+					margin-right: 10px
+
+
 @import "media" // Всегда в конце
