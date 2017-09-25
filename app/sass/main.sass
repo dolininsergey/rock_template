@@ -46,6 +46,18 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	z-index: 1002
+	background-image: url(../img/preloader.gif);
+	background-repeat: no-repeat
+	background-position: center
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -89,6 +101,11 @@ body
 			background-color: $accent
 			color: #fff
 			padding: 13px 45px
+			&:hover
+				background-color: #fff
+				color: $accent
+				text-decoration: none
+				transition: background-color .20s ease
 	nav
 		width: 100%
 		min-height: 85px
@@ -143,8 +160,11 @@ body
 				.button
 					color: $accent
 					&:hover
-						opacity: 0.9
-						transition: opacity .40s ease
+						//opacity: 0.9
+						// background-color: $accent
+						// color: #fff
+						// border: solid 1px #fff
+						// transition: background-color .20s ease
 							
 	.header-tagline
 		text-align: center
@@ -161,40 +181,59 @@ body
 
 section
 	margin-top: 5%
+.content
+	display: flex
+	flex-direction: column
+	align-items: center	
+
 .content-item
 	//background-color: yellow
-	overflow: hidden
+	// overflow: hidden
+	// display: flex
 	.content-item-headers
 		//background-color: #dedede
 		font-size: 32px
 		.h4
 			font-family: oswald
 			color: $common-grey
+			text-transform: uppercase
 		.h3
 			font-family: vibes
 			color: $accent	
 .members-carousel
+	//background-color: yellow
+
+.musicians-group
 	display: flex
+	width: 100%
 	justify-content: space-between
 .member
 	//border: solid 1px #000
-	padding: 0
-	max-width: 365px
+	//padding: 0
+	//max-width: 355px //max 355
+	margin-right: 20px
+	position: relative
+	&:last-child
+		margin-right: 0px
 	.member-img
-		max-height: 360px
+		max-height: 420px
 		overflow: hidden
 		img
 			max-width: 100%
 	.member-description
 		color: #fff
 		background-color: $accent
-		padding: 20px
+		padding: 10px
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
 		.mem-name
 		 font-family: oswald
-		 font-size: 22px
+		 font-size: 20px
 		.mem-category
 			font-family: droid
-			font-size: 16px
+			font-size: 14px
 		.mem-socials 
 			padding: 0
 			display: none
@@ -214,8 +253,116 @@ section
 					&:last-child
 						margin-right: 0px
 				.fa
-					font-size: 24px
+					font-size: 22px
 					margin-right: 10px
+
+// Owl Carousel
+
+.members-carousel 
+	//background-color: red
+	position: relative
+
+.owl-nav
+	display: flex
+	position: absolute
+	top: -50px
+	right: 0
+	font-size: 24px
+	color: #fff
+	.owl-next
+		margin-left: 5px
+	> div
+		width: 30px
+		height: 30px
+		line-height: 30px
+		background-color: $accent
+		text-align: center
+
+.border-line
+	height: 1px
+	background-color: #DFDFDF
+	margin-top: 7%
+	margin-bottom: 7%
+
+// .content-item-concerts
+// 	padding: 0
+
+.concerts-group
+	//background-color: purple
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.concert-block
+		position: relative
+		
+		.content-item-headers
+			//text-align: center
+		.album
+			display: flex
+			align-items: center
+			.album-img
+				min-width: 250px
+				min-height: 270px
+				background-size: cover
+				background-position: right
+				opacity: 0.95
+				display: flex
+				align-items: center
+				justify-content: center
+				font-family: oswald
+				font-weight: bold
+				text-align: center
+				font-size: 45px
+				color: #fff
+				//text-align: center
+				//opacity: 0.8
+				// img
+				// 	max-width: 100%
+				// 	max-height: 100%
+			.concert-description
+				ul
+					list-style-type: none
+					li
+						font-family: droid
+						font-size: 16px
+						color: $common-grey
+						&:first-child
+							font-family: oswald
+							font-weight: medium
+							font-size: 22px
+	.video-block
+		iframe
+			width: 320px
+			height: 270px		
+
+.founder-block
+	background-color: $common-grey
+	background-image: url(../img/founder.png)
+	background-repeat: no-repeat
+	background-position: 280px -150px
+	background-size: cover
+	// display: flex
+	// flex-direction: column
+	// justify-content: center
+	padding-top: 50px
+	padding-left: 80px
+	padding-bottom: 50px
+	.founder-text
+		font-family: droid
+		color: #fff
+		.founder-header
+			font-family: oswald
+			font-size: 32px
+			font-weight: medium
+			text-transform: uppercase
+	.button
+		color: $accent
+		background-color: #fff
+
+
+
+
+
 
 
 @import "media" // Всегда в конце
